@@ -5,31 +5,25 @@ import java.sql.Timestamp;
 
 public class Post {
     private Integer pId;
-    private User user;
+    private Integer uId;
     private String pTilte;
     private String pContent;
     private Timestamp pCommentTime;
+    private User user;
+
 
     public Post() {
     }
 
-    public Post(Integer pId, User user, String pTilte, String pContent, Timestamp pCommentTime) {
+
+
+    public Post(Integer pId, Integer uId, String pTilte, String pContent, Timestamp pCommentTime, User user) {
         this.pId = pId;
-        this.user = user;
+        this.uId = uId;
         this.pTilte = pTilte;
         this.pContent = pContent;
         this.pCommentTime = pCommentTime;
-    }
-
-    @Override
-    public String toString() {
-        return "Post{" +
-                "pId=" + pId +
-                ", user=" + user +
-                ", pTilte='" + pTilte + '\'' +
-                ", pContent='" + pContent + '\'' +
-                ", pCommentTime=" + pCommentTime +
-                '}';
+        this.user = user;
     }
 
     public Integer getpId() {
@@ -40,12 +34,12 @@ public class Post {
         this.pId = pId;
     }
 
-    public User getUser() {
-        return user;
+    public Integer getuId() {
+        return uId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setuId(Integer uId) {
+        this.uId = uId;
     }
 
     public String getpTilte() {
@@ -70,5 +64,25 @@ public class Post {
 
     public void setpCommentTime(Timestamp pCommentTime) {
         this.pCommentTime = pCommentTime;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "pId=" + pId +
+                ", uId=" + uId +
+                ", pTilte='" + pTilte + '\'' +
+                ", pContent='" + pContent + '\'' +
+                ", pCommentTime=" + pCommentTime +
+                ", user=" + user +
+                '}';
     }
 }

@@ -17,6 +17,18 @@ public class User {
     }
 
 
+
+    public User(Integer uId) {
+        this.uId = uId;
+    }
+
+    public User(Integer uId, String uName, Integer uPostCount, Integer uCommentCount) {
+        this.uId = uId;
+        this.uName = uName;
+        this.uPostCount = uPostCount;
+        this.uCommentCount = uCommentCount;
+    }
+
     public User(Integer uId, String uName, Sex sex, Jurisdiction jurisdiction, Integer uPostCount, Integer uCommentCount, Timestamp uRegisterTime, String uIntroduceBirefly) {
         this.uId = uId;
         this.uName = uName;
